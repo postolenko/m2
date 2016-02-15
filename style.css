@@ -1443,6 +1443,10 @@ select::-ms-expand {
     width: 36%;
 }
 
+/* Вот отсюда пришлось поменять немного стилей так как удалил кнопки и сделал ссылками  */
+
+
+
 .buy-btn {
     display: inline-block;
     vertical-align: middle;
@@ -1496,7 +1500,7 @@ select::-ms-expand {
     vertical-align: top;
 }
 
-.master-btn {
+.master-btn {               /* В этом классе */
     display: inline-block;
     vertical-align: top;
     color: #202020;
@@ -1543,7 +1547,9 @@ select::-ms-expand {
 }
 
 
-.sample-btn {
+
+
+.sample-btn {                /* В этом классе */
     display: inline-block;
     vertical-align: top;
     color: #202020;
@@ -1578,6 +1584,9 @@ select::-ms-expand {
     transition-duration: 0.3s;
     transition-timing-function: ease;
 }
+
+
+/* до сюда */
 
 .sample-btn:link,
 .sample-btn:visited {

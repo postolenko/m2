@@ -6,25 +6,24 @@ var resultReg;
 
 $("a").click(function(e) {
 	
-		if ( $(this).attr("id")) {
+		if ( $(this).attr("href")) {
 
-		attrStr = $(this).attr("id");
+		attrStr = String($(this).attr("href"));
 
-		reAttr = /modal/g;
+		reAttr = /#modal/g;
 
 	    while ((resultReg = reAttr.exec(attrStr)) != null) {
 
-	    	if(resultReg[0] == "modal") {	    		
+	    	if(resultReg[0] == "#modal") {	    		
 
 	    		e.preventDefault();
 
-	    		$(".formmodal").fadeIn(300);
+	    		$("#" + attrStr.substr(1)).fadeIn(300);
 
-				$(".formmodal .modal-data").css({"top": ( $(window).height() - $(".formmodal .modal-data").height() ) / 2  + "px"});
-
-				console.log(resultReg[0]);
+				$("#" + attrStr.substr(1) + " .modal-data").css({"top": ( $(window).height() - $(".formmodal .modal-data").height() ) / 2  + "px"});
 
 	    		break;
+
 	    	}
 
 	    }
@@ -32,6 +31,7 @@ $("a").click(function(e) {
 	}
 
 });
+
 
 
 	$(".modal-bg, .closemodal-btn").click(function() {
